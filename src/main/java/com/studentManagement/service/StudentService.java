@@ -39,7 +39,7 @@ public class StudentService {
 	public Student updateStudent(Integer studentId, String newEmail) {
 		Student dbStudentObj = getSingleStudent(studentId);
 		dbStudentObj.setEmail(newEmail);
-		System.out.println("helo bikash");
+		System.out.println("helo bikash1");
 		return studentRepository.save(dbStudentObj);
 
 	}
