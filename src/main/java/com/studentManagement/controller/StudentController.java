@@ -46,7 +46,7 @@ public class StudentController {
 			@PathVariable("newEmail") String newEmail) {
 		return studentService.updateStudent(Id, newEmail);
 	}
-
+ 
 	// Delete Student
 	@DeleteMapping(value = "/{Id}") // http://localhost:8080/student/1
 	public void deleteStudent(@PathVariable("Id") Integer Id) {

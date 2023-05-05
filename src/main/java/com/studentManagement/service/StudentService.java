@@ -42,11 +42,13 @@ public class StudentService {
 		return studentRepository.save(dbStudentObj);
 
 	}
-
+  
+	
+	
 	// Delete Student
 	public void deleteStudent(Integer Id) {
 		studentRepository.deleteById(Id);
-		// deleteById ==> delete from tbl_student where student_id=studentId
+		// deleteById ==> delete from tbl_student where student_id=Id
 	}
 
 }
