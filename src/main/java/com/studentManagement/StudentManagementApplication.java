@@ -21,9 +21,9 @@ public class StudentManagementApplication implements CommandLineRunner{
 		public void run(String...args) throws Exception{
 
 			Student inputObj=new Student();
-			inputObj.setStudentName("Bhaktiprasad Lenka");
-			inputObj.setStudentcourse("B.Tec");
-			inputObj.setStudentaddress("Odisha");
+			inputObj.setName("Bhaktiprasad Lenka");
+			inputObj.setCourse("B.Tec");
+			inputObj.setAddress("Odisha");
 			inputObj.setEmail("bhakti@gmail.com");
 			
 			studentService.createNewStudent(inputObj);

@@ -34,23 +34,23 @@ public class StudentController {
 	}
 
 	// Get Single Student
-	@GetMapping(value = "/{studentId}") // http://localhost:8080/student/1
-	public Student getSingleStudent(@PathVariable("studentId") Integer studentId) {
-		return studentService.getSingleStudent(studentId);
+	@GetMapping(value = "/{Id}") // http://localhost:8080/student/1
+	public Student getSingleStudent(@PathVariable("Id") Integer Id) {
+		return studentService.getSingleStudent(Id);
 	}
 
 	// Update Student
-	// http://localhost:8080/student/1/bhakti@gmail.com
-	@PutMapping(value = "/{studentId}/{newEmail}") // http://localhost:8080/tickets/1/new@gmail.com
-	public Student updateStudent(@PathVariable("studentId") Integer studentId,
+
+	@PutMapping(value = "/{Id}/{newEmail}") // http://localhost:8080/student/1/new@gmail.com
+	public Student updateStudent(@PathVariable("Id") Integer Id,
 			@PathVariable("newEmail") String newEmail) {
-		return studentService.updateStudent(studentId, newEmail);
+		return studentService.updateStudent(Id, newEmail);
 	}
 
 	// Delete Student
-	@DeleteMapping(value = "/{studentId}") // http://localhost:8080/student/1
-	public void deleteStudent(@PathVariable("studentId") Integer studentId) {
-		studentService.deleteStudent(studentId);
+	@DeleteMapping(value = "/{Id}") // http://localhost:8080/student/1
+	public void deleteStudent(@PathVariable("Id") Integer Id) {
+		studentService.deleteStudent(Id);
 	}
 
 }

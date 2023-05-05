@@ -12,59 +12,59 @@ import javax.persistence.Table;
 public class Student {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "student_id")
-	private Integer studentId;
+	@Column(name = "id")
+	private Integer Id;
 
-	@Column(name = "student_name")
-	private String studentName;
+	@Column(name = "name")
+	private String Name;
 
-	@Column(name = "student_course")
-	private String studentcourse;
+	@Column(name = "course")
+	private String Course;
 
-	@Column(name = "student_addresss")
-	private String studentaddress;
+	@Column(name = "addresss")
+	private String Address;
 
 
 	private String email;
 
 
-	public Integer getStudentId() {
-		return studentId;
+	public Integer getId() {
+		return Id;
 	}
 
 
-	public void setStudentId(Integer studentId) {
-		this.studentId = studentId;
+	public void setId(Integer Id) {
+		this.Id = Id;
 	}
 
 
-	public String getStudentName() {
-		return studentName;
+	public String getName() {
+		return Name;
 	}
 
 
-	public void setStudentName(String studentName) {
-		this.studentName = studentName;
+	public void setName(String Name) {
+		this.Name = Name;
 	}
 
 
-	public String getStudentcourse() {
-		return studentcourse;
+	public String getCourse() {
+		return Course;
 	}
 
 
-	public void setStudentcourse(String studentcourse) {
-		this.studentcourse = studentcourse;
+	public void setCourse(String Course) {
+		this.Course = Course;
 	}
 
 
-	public String getStudentaddress() {
-		return studentaddress;
+	public String getAddress() {
+		return Address;
 	}
 
 
-	public void setStudentaddress(String studentaddress) {
-		this.studentaddress = studentaddress;
+	public void setAddress(String Address) {
+		this.Address = Address;
 	}
 
 
@@ -78,11 +78,11 @@ public class Student {
 	}
 
 
-	public Student(String studentName, String studentcourse, String studentaddress, String email) {
+	public Student(String Name, String Course, String Address, String email) {
 		super();
-		this.studentName = studentName;
-		this.studentcourse = studentcourse;
-		this.studentaddress = studentaddress;
+		this.Name = Name;
+		this.Course = Course;
+		this.Address = Address;
 		this.email = email;
 	}
    
@@ -90,8 +90,8 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student [studentId=" + studentId + ", studentName=" + studentName + ", studentcourse=" + studentcourse
-				+ ", studentaddress=" + studentaddress + ", email=" + email + "]";
+		return "Student [Id=" + Id + ", Name=" + Name + ", Course=" + Course
+				+ ", Address=" + Address + ", email=" + email + "]";
 	}
 	
 	

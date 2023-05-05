@@ -29,23 +29,23 @@ public class StudentService {
 
 	// Retrieve Single Student
 
-	public Student getSingleStudent(Integer studentId) {
-		return studentRepository.findById(studentId).orElse(new Student());
+	public Student getSingleStudent(Integer Id) {
+		return studentRepository.findById(Id).orElse(new Student());
 
 	}
 
 	// Update Student
 
-	public Student updateStudent(Integer studentId, String newEmail) {
-		Student dbStudentObj = getSingleStudent(studentId);
+	public Student updateStudent(Integer Id, String newEmail) {
+		Student dbStudentObj = getSingleStudent(Id);
 		dbStudentObj.setEmail(newEmail);
 		return studentRepository.save(dbStudentObj);
 
 	}
 
 	// Delete Student
-	public void deleteStudent(Integer studentId) {
-		studentRepository.deleteById(studentId);
+	public void deleteStudent(Integer Id) {
+		studentRepository.deleteById(Id);
 		// deleteById ==> delete from tbl_student where student_id=studentId
 	}
 
