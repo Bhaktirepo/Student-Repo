@@ -35,12 +35,19 @@ public class StudentService {
 	}
 
 	// Update Student
-
-	public Student updateStudent(Integer Id, String newEmail) {
-		Student dbStudentObj = getSingleStudent(Id);
-		dbStudentObj.setEmail(newEmail);
-		return studentRepository.save(dbStudentObj);
-
+//
+//	public Student updateStudent(Integer Id, String newEmail) {
+//		Student dbStudentObj = getSingleStudent(Id);
+//		dbStudentObj.setEmail(newEmail);
+//		return studentRepository.save(dbStudentObj);
+//
+//	}
+	public Student updateStudent(Integer Id, String newEmail, String newAddress, String newCourse) {
+	    Student dbStudentObj = getSingleStudent(Id);
+	    dbStudentObj.setEmail(newEmail);
+	    dbStudentObj.setAddress(newAddress);
+	    dbStudentObj.setCourse(newCourse);
+	    return studentRepository.save(dbStudentObj);
 	}
   
 	

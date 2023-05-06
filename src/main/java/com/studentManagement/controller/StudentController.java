@@ -41,10 +41,18 @@ public class StudentController {
 
 	// Update Student
 
-	@PutMapping(value = "/{Id}/{newEmail}") // http://localhost:8080/student/1/new@gmail.com
+//	@PutMapping(value = "/{Id}/{newEmail}") // http://localhost:8080/student/1/new@gmail.com
+//	public Student updateStudent(@PathVariable("Id") Integer Id,
+//			@PathVariable("newEmail") String newEmail) {
+//		return studentService.updateStudent(Id, newEmail);
+//	}
+	
+	@PutMapping(value = "/{Id}/{newEmail}/{newAddress}/{newCourse}")
 	public Student updateStudent(@PathVariable("Id") Integer Id,
-			@PathVariable("newEmail") String newEmail) {
-		return studentService.updateStudent(Id, newEmail);
+	        @PathVariable("newEmail") String newEmail,
+	        @PathVariable("newAddress") String newAddress,
+	        @PathVariable("newCourse") String newCourse) {
+	    return studentService.updateStudent(Id, newEmail, newAddress, newCourse);
 	}
  
 	// Delete Student
